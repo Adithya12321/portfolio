@@ -1,4 +1,5 @@
 
+import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import About from './pages/About'
@@ -11,7 +12,7 @@ function App() {
   
 
   return (
-    <div >
+    <div className='bg-[#121212] text-[#F3F3F3]'>
       <div><Navbar /></div>
       <div ><HeroSection /></div>
       <div ><FeaturedProjects /></div>
