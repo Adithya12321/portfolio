@@ -12,7 +12,7 @@ function App() {
   
 
   return (
-    <div className='bg-[#121212] text-[#F3F3F3]'>
+    <div className='bg-[#121212] '>
       <div><Navbar /></div>
       <div ><HeroSection /></div>
       <div ><FeaturedProjects /></div>

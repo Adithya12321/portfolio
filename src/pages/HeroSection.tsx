@@ -16,7 +16,7 @@ const HeroSection = () => {
   const boxRef = useRef(null);
   const textRef = useRef(null);
   const starRef = useRef<THREE.Mesh>(null);
-  
+  gsap.registerPlugin(ScrollTrigger);
   const summaryText = "I turn ideas into interactive, responsive, and performance-first websites using React, GSAP";
     useEffect(() => {
         const el = document.getElementById("typewriter");
@@ -46,6 +46,8 @@ const HeroSection = () => {
             }
           })
           gsap.to('.ppGsap', {x:-5, y:-5, duration:1, repeat:-1, yoyo: true,delay:2})
+          gsap.fromTo('.cubeGPP', {y:-500}, {y: 20, duration:1.5})
+          gsap.to('.cubeGPP', {y:-100, duration:1, repeat:-1, yoyo: true,delay:1.4})
           // gsap.to('.star', {scale:0.5, duration:1, repeat:-1, yoyo: true,delay:2})
     }, [])
   return (
@@ -56,7 +58,7 @@ const HeroSection = () => {
           <img src={profileImage} alt="" className="ppGsap scale-80 rounded-2xl border drop-shadow-[0_0_6px_rgba(210,210,218,1)]"/>
         </div>
         <div  className="w-full h-full  flex-1 flex flex-col justify-end gap-y-4 text-right p-20">
-          <div className="flex-1">
+          <div className="cubeGPP flex-1 flex justify-end">
           <Canvas className="star  flex drop-shadow-[0_0_6px_rgba(210,210,218,1)]">
             <RenderCube />
             {/* <RenderStars /> */}
