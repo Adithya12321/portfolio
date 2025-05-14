@@ -8,6 +8,7 @@ import profileImage from '/profileImage.jpg'
 import RenderCube from "../components/RenderCube";
 import { OrbitControls } from "@react-three/drei";
 import { RenderStars } from "../components/RenderStars";
+import { TypingText } from "@/components/animate-ui/text/typing";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -66,9 +67,16 @@ const HeroSection = () => {
           </Canvas>
           </div>
           <div ref={textRef} className="flex-1 flex flex-col justify-end drop-shadow-[0_0_3px_rgba(210,210,218,1)]">
-          <h1 className="text-6xl p-2 ">Adithya Venkatesth P</h1>
-          <p className="text-3xl p-2 ">Web Developer</p>
-          <p id="typewriter" className="text-wrap flex-1 p-2"></p>
+          <div className="flex-1"></div>
+          <div className="flex-1">
+            <h1 className="text-6xl p-2 ">Adithya Venkatesth P</h1>
+          </div>
+          <div className="flex-1">
+            <p className="text-3xl p-2 "><TypingText text="Web Developer" delay={2000} loop={true}/></p>
+          </div>
+          <div className="flex-1  p-2">
+            <p>{summaryText}</p>
+          </div>
           </div>
         </div>
       </div>

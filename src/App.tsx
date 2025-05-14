@@ -15,9 +15,9 @@ function App() {
     <div className='bg-[#121212] '>
       <div><Navbar /></div>
       <div ><HeroSection /></div>
-      <div ><FeaturedProjects /></div>
-      <div ><SkillsAndTools /></div>
       <div ><About /></div>
+      <div ><FeaturedProjects /></div>
+      {/* <div ><SkillsAndTools /></div> */}
       <div ><Contact /></div>
     </div>
   )
