@@ -1,57 +1,46 @@
-import reactLogo from '../assets/react.svg'
-import htmlLogo from '../assets/html.svg'
-import gitHubLogo from '../assets/github.svg'
-import pythonLogo from '../assets/python.svg'
-import tailwindLogo from '../assets/tailwind-css.svg'
-import SkillCards from '../components/SkillCards'
-import gsap from "gsap"
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { useEffect } from 'react'
-gsap.registerPlugin(ScrollTrigger)
+import React from 'react'
+
 const About = () => {
-
-    useEffect(() => {
-      gsap.fromTo([".rightDiv", ".centerDiv", ".leftDiv"], {opacity:0, scale:0.1}, {scale:1, opacity:1, duration:1, scrollTrigger: {
-          trigger:".rightDiv",
-          start:"top 80%"
-        }})
-    })
-
-    return (
-    <section id="about">
-      <div className="w-full h-screen flex p-15 text-[#F3F3F3]">
-        <div className='flex border rounded-2xl bg-[#1E1E1E]'>
-          <div className="leftDiv flex-1  p-10 flex flex-col justify-between ">
-          <h1 className=" rounded-xl text-center text-2xl font-bold drop-shadow-[0_0_6px_rgba(100,100,100,1)]">ABOUT ME</h1>
-          <div className=" border"> render 3d model here</div>
-          <p>Self-taught developer skilled in React, React Native, and Three.js, with a hands-on approach to learning. I build scalable, real-world projects and aim to contribute to teams focused on performance, design, and user experience.</p>
-        </div>
-        <div className="centerDiv flex-1  p-10">
-          <h1 className=" rounded-xl text-center text-2xl font-bold drop-shadow-[0_0_6px_rgba(100,100,100,1)]">EXPERIENCE</h1>
-          <p className="py-4"><strong>Software Engineer – CGI</strong><br /><p className="font-semibold">2023 - Present</p><br />
-Working on enterprise-level applications with a focus on software quality, collaboration, and end-to-end system understanding. Gaining hands-on experience in Agile workflows, cross-functional teamwork, and modern development environments.</p>
-        </div>
-        <div className="rightDiv flex-1  p-10">
-          <h1 className=" rounded-xl text-center text-2xl font-bold drop-shadow-[0_0_6px_rgba(100,100,100,1)]">EDUCATION</h1>
-          <ul className="py-4">
-            <li className="flex p-2"><p className="flex-1">2019 - 2023</p><p className="flex-2 pl-10">Indian Institute Of Information Technology, Trichy</p></li>
-            <li className="flex p-2"><p className="flex-1">2017 - 2019</p><p className="flex-2 pl-10">Sri Chaitany Junior College, Visakhapatnam</p></li>
-            <li className="flex p-2"><p className="flex-1">2019 - 2023</p><p className="flex-2 pl-10">St` Aloysius Anglo Indian High School</p></li>
-          </ul>
-          <div className=''>
-            <h1 className="rounded-xl text-center text-2xl font-bold my-4  drop-shadow-[0_0_6px_rgba(100,100,100,1)]">SKILLS</h1>
-            <div className='flex flex-wrap justify-center'>
-              <SkillCards image={reactLogo} name='REACT'/>
-              <SkillCards image={htmlLogo} name='HTML'/>
-              <SkillCards image={gitHubLogo} name='GITHUB'/>
-              <SkillCards image={pythonLogo} name='PYTHON'/>
-              <SkillCards image={tailwindLogo} name='TAILWINDCSS'/>
+  return (
+    <div className='px-[15%] py-[10%] w-full h-screen text-white'>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">About Me</h2>
+            <div className="flex flex-col md:flex-row items-center">
+                <div className="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div className="w-64 h-64 rounded-lg overflow-hidden shadow-lg">
+                        <img src="" alt="About me" className="w-full h-full object-cover"/>
+                    </div>
+                </div>
+                <div className="md:w-2/3 md:pl-12">
+                    <h3 className="text-2xl font-semibold mb-4">Who am I?</h3>
+                    <p className=" dark:text-gray-300 mb-6 leading-relaxed">
+                        I'm a frontend developer focused on building clean, responsive, and scalable web applications using React,
+                        TypeScript, and modern UI frameworks. I enjoy turning real-world problems into user-friendly solutions, with
+                        an emphasis on performance and maintainability.
+                    </p>
+                    <p className=" dark:text-gray-300 mb-6 leading-relaxed">
+                        With a background in QA and automation testing, I bring a quality-first mindset to development. This allows
+                        me to write robust code, anticipate edge cases, and ensure smooth, issue-free deployments — combining
+                        development efficiency with long-term stability.
+                    </p>
+                    <div className="flex flex-wrap gap-4">
+                        <div className="flex items-center">
+                            <i className="fas fa-map-marker-alt text-blue-500 mr-2"></i>
+                            <span>Hyderabas, India</span>
+                        </div>
+                        <div className="flex items-center">
+                            <i className="fas fa-envelope text-blue-500 mr-2"></i>
+                            <span>adithyavenkatesh00@gmail.com</span>
+                        </div>
+                        <div className="flex items-center">
+                            <i className="fas fa-phone text-blue-500 mr-2"></i>
+                            <span>8247207533</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        </div>
-      </div>
-    </section>
+    </div>
   )
 }
 

@@ -12,13 +12,13 @@ function App() {
   
 
   return (
-    <div className='bg-[#121212] '>
-      <div><Navbar /></div>
-      <div ><HeroSection /></div>
-      <div ><About /></div>
+    <div className='bg-[#121212 ] '>
+      {/* <div><Navbar /></div> */}
+      {/* <div ><HeroSection /></div> */}
+      {/* <div ><About /></div> */}
       <div ><FeaturedProjects /></div>
       {/* <div ><SkillsAndTools /></div> */}
-      <div ><Contact /></div>
+      {/* <div ><Contact /></div> */}
     </div>
   )
 }

@@ -52,7 +52,7 @@ const Navbar = () => {
     <div className="navBar w-full h-10 border flex px-2 fixed top-0 left-0 text-[#F3F3F3] bg-[#121212] z-10">
       
       <div className="logo size-10 flex items-center justify-center">
-        <img src="" alt="" onClick={() => handelClick("home")} className="logo size-8 rounded-full border"/>
+        <img src="./profileImage.jpg" alt="" onClick={() => handelClick("home")} className="logo size-8 rounded-full border"/>
       </div>
       <div className="navigation w-full h-full flex items-center justify-center gap-8 text-lg">
         <a onClick={() => handelClick("home")} className={`${ isHome ? 'drop-shadow-[0_0_10px_rgba(253,253,253,1)]' : ''}`}>Home</a>
