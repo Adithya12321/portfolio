@@ -56,18 +56,18 @@ const Contact = () => {
                     </div>
                     
                     <div className="mt-8 flex space-x-4">
-                        <a href="#" className="h-10 w-10 rounded-full flex items-center justify-center  hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 transition">
+                        <a href="https://github.com/Adithya12321" className="h-10 w-10 rounded-full flex items-center justify-center  hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 transition">
                             <Github />
                         </a>
-                        <a href="#" className="h-10 w-10 rounded-full  flex items-center justify-center  hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 transition">
+                        <a href="https://www.linkedin.com/in/adithya-venkatesh-pithani-5bb4602aa/" className="h-10 w-10 rounded-full  flex items-center justify-center  hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 transition">
                             <Linkedin />
                         </a>
-                        <a href="#" className="h-10 w-10 rounded-full  flex items-center justify-center  hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 transition">
+                        {/* <a href="#" className="h-10 w-10 rounded-full  flex items-center justify-center  hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 transition">
                             <Twitter />
                         </a>
                         <a href="#" className="h-10 w-10 rounded-full  flex items-center justify-center  hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 transition">
                             <Instagram />
-                        </a>
+                        </a> */}
                     </div>
                 </div>
                 
