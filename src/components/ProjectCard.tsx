@@ -1,10 +1,6 @@
-import React from 'react'
 
 const ProjectCard = ({name,imgPath, skills, description, gitHubLink, liveDemoLink} : {name:string,imgPath:string, skills:string[], description:string, gitHubLink:string, liveDemoLink:string}) => {
-    const bgColour = "bg-[#1A202C]"
-    const textColour = "text-[#E2E8F0]"
-    const accentColour = "[#63B3ED]"
-    const secondary = "[#2D3748]"
+    
 
   return (
     <div className='w-full h-full flex flex-col '>
