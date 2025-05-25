@@ -1,11 +1,8 @@
 import { Button } from '@/components/ui/button'
-import React from 'react'
 
 const HeroSection = () => {
   const bgColour = "bg-[#1A202C]"
   const textColour = "text-[#E2E8F0]"
-  const accentColour = "[#63B3ED]"
-  const secondary = "[#2D3748]"
 
   const handelClick = (id:string) => {
     const element = document.getElementById(id);

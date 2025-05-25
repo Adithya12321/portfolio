@@ -1,12 +1,7 @@
 import { Button } from '@/components/ui/button'
-import { Github, Instagram, Linkedin, Mail, MapPinned, Phone, Twitter } from 'lucide-react'
-import React from 'react'
+import { Github, Linkedin, Mail, MapPinned, Phone } from 'lucide-react'
 
 const Contact = () => {
-    const bgColour = "bg-[#1A202C]"
-    const textColour = "text-[#E2E8F0]"
-    const accentColour = "[#63B3ED]"
-    const secondary = "[#2D3748]"
 
   return (
     <section id='contact'>

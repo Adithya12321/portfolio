@@ -1,12 +1,11 @@
 
-import { useState } from 'react'
+
 import './App.css'
 import Navbar from './components/Navbar'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import FeaturedProjects from './pages/FeaturedProjects'
 import HeroSection from './pages/HeroSection'
-import SkillsAndTools from './pages/SkillsAndTools'
 
 function App() {
   

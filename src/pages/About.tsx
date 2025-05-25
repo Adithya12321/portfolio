@@ -1,12 +1,5 @@
-import { BubbleBackground } from '@/components/animate-ui/backgrounds/bubble'
-import { MotionHighlight } from '@/components/animate-ui/effects/motion-highlight'
-import React from 'react'
 
 const About = () => {
-    const bgColour = "bg-[#1A202C]"
-    const textColour = "text-[#E2E8F0]"
-    const accentColour = "[#63B3ED]"
-    const secondary = "[#2D3748]"
   return (
     <section id='about' className=''>
     <div className='px-[15%] py-[10%] w-full h-screen text-[#E2E8F0] bg-[#1A202C] '>
