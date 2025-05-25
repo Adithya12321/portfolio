@@ -7,7 +7,7 @@ const ProjectCard = ({name, skills, description, gitHubLink, liveDemoLink} : {na
     const secondary = "[#2D3748]"
 
   return (
-    <div className='w-full h-full flex flex-col'>
+    <div className='w-full h-full flex flex-col '>
         <div className='flex-4'>
             <a href="https://focus-flow-timer-spg2y14d6-adithyas-projects-6b3fc28c.vercel.app/"><img src="./focusFlowTimer.png" alt="project-1" className='rounded-xl'/></a>
         </div>
@@ -23,9 +23,9 @@ const ProjectCard = ({name, skills, description, gitHubLink, liveDemoLink} : {na
                     ))
                 }
             </div>
-            <div className={`flex flex-wrap gap-x-2 text-[#63B3ED]`}>
-                <a href={gitHubLink} className=''>code</a>
-                <a href={liveDemoLink} >live demo</a>
+            <div className={`flex flex-wrap gap-x-2 text-[#63B3ED] font-semibold `}>
+                <a href={gitHubLink} className='hover:drop-shadow-[0_0_6px_rgba(255,255,255,1)] hover:scale-110'>code</a>
+                <a href={liveDemoLink} className='hover:drop-shadow-[0_0_6px_rgba(255,255,255,1)] hover:scale-110'>live demo</a>
             </div>
         </div>
     </div>

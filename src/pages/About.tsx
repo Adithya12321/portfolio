@@ -1,11 +1,16 @@
 import React from 'react'
 
 const About = () => {
+    const bgColour = "bg-[#1A202C]"
+    const textColour = "text-[#E2E8F0]"
+    const accentColour = "[#63B3ED]"
+    const secondary = "[#2D3748]"
   return (
-    <div className='px-[15%] py-[10%] w-full h-screen text-white'>
+    <section id='about'>
+    <div className='px-[15%] py-[10%] w-full h-screen text-[#E2E8F0] bg-[#1A202C]'>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">About Me</h2>
-            <div className="flex flex-col md:flex-row items-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text text-[#63B3ED]">About Me</h2>
+            <div className="flex flex-col md:flex-row items-center justify-center">
                 <div className="md:w-1/3 mb-8 md:mb-0 flex justify-center">
                     <div className="w-64 h-64 rounded-lg overflow-hidden shadow-lg">
                         <img src="" alt="About me" className="w-full h-full object-cover"/>
@@ -41,6 +46,7 @@ const About = () => {
             </div>
         </div>
     </div>
+    </section>
   )
 }
 
