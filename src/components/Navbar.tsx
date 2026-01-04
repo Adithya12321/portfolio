@@ -1,59 +1,44 @@
 
-import { useState } from "react";
 
-const Navbar = () => {
-  const [isHome, setIsHome] = useState(false);
-  const [isProjects, setIsProjects] = useState(false);
-  const [isAbout, setIsAbout] = useState(false);
-  const [isContact, setIsContact] = useState(false);
-  const handelClick = (id:string) => {
-    const element = document.getElementById(id);
-    if (id === 'home') {
-      setIsHome(true)
-      setIsProjects(false)
-      setIsAbout(false)
-      setIsContact(false)
-      
-    } else if (id === 'projects') {
-      setIsHome(false)
-      setIsProjects(true)
-      setIsAbout(false)
-      setIsContact(false)
-    } else if (id === 'skills') {
-      setIsHome(false)
-      setIsProjects(false)
-      setIsAbout(false)
-      setIsContact(false)
-    } else if (id === 'about') {
-      setIsHome(false)
-      setIsProjects(false)
-      setIsAbout(true)
-      setIsContact(false)
-    } else if (id === 'contact') {
-      setIsHome(false)
-      setIsProjects(false)
-      setIsAbout(false)
-      setIsContact(true)
-    }
-    if (element) {
-      element.scrollIntoView({behavior: "smooth"})
-    }
-
-  }
-  return (
-    <div className="navBar w-full h-10 flex px-2 fixed top-0 left-0 text-[#F3F3F3] bg-[#1A202C]/90 z-10">
-      
-      
-      <div className="navigation w-full h-full flex items-center justify-center gap-8 text-lg">
-        <a onClick={() => handelClick("home")} className={`${ isHome ? 'drop-shadow-[0_0_10px_rgba(253,253,253,1)]' : ''}`}>Home</a>
-        <a onClick={() => handelClick("about")} className={`${ isAbout ? 'drop-shadow-[0_0_10px_rgba(253,253,253,1)]' : ''}`}>About</a>
-        <a onClick={() => handelClick("projects")} className={`${ isProjects ? 'drop-shadow-[0_0_10px_rgba(253,253,253,1)]' : ''}`}>Projects</a>
-        
-        <a onClick={() => handelClick("contact")} className={`${ isContact ? 'drop-shadow-[0_0_10px_rgba(253,253,253,1)]' : ''}`}>Contact</a>
-      </div>
-      
-    </div>
-  )
+interface NavbarProps {
+  activeSection: string;
 }
 
-export default Navbar
+const Navbar = ({ activeSection }: NavbarProps) => {
+
+  const handleClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const navItems = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' },
+  ];
+
+  return (
+    <div className="navBar w-full h-16 flex px-2 fixed top-0 left-0 text-foreground bg-background/90 backdrop-blur-md z-10 border-b border-border/10">
+      <div className="navigation w-full h-full flex items-center justify-center gap-8 text-lg font-medium">
+        {navItems.map((item) => (
+          <a
+            key={item.id}
+            onClick={() => handleClick(item.id)}
+            className={`cursor-pointer transition-all duration-300 hover:text-primary ${activeSection === item.id
+              ? 'text-primary drop-shadow-[0_0_15px_var(--color-primary)]'
+              : 'text-muted-foreground'
+              }`}
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
