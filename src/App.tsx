@@ -7,12 +7,14 @@ import Contact from './pages/Contact'
 import FeaturedProjects from './pages/FeaturedProjects'
 import HeroSection from './pages/HeroSection'
 
+import { useScrollSpy } from './hooks/useScrollSpy'
+
 function App() {
-  
+  const activeSection = useScrollSpy(['home', 'about', 'projects', 'contact'], 100);
 
   return (
-    <div className='bg-[#121212 ] '>
-      <div><Navbar /></div>
+    <div className='bg-background min-h-screen text-foreground font-[Inter]'>
+      <div><Navbar activeSection={activeSection} /></div>
       <div ><HeroSection /></div>
       <div ><About /></div>
       <div ><FeaturedProjects /></div>
