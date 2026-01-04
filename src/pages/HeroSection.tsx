@@ -18,10 +18,10 @@ const HeroSection = () => {
               <h1 className='text-4xl md:text-5xl lg:text-7xl font-bold mb-6 tracking-tight'>
                 Hi, I'm <span className={`text-primary drop-shadow-[0_0_15px_rgba(var(--primary),0.5)]`}>Adithya</span>
               </h1>
-              <h2 className='text-2xl md:text-3xl font-semibold mb-6 text-muted-foreground'>FRONTEND DEVELOPER</h2>
+              <h2 className='text-2xl md:text-3xl font-semibold mb-6 text-muted-foreground'>SOFTWARE ENGINEER</h2>
               <p className='text-lg mb-8 max-w-xl text-muted-foreground leading-relaxed'>
-                I build exceptional digital experiences that are fast, accessible, and visually appealing.
-                Focused on creating scalable solutions tailored to user needs.
+                I engineer robust digital solutions with a focus on quality, automation, and precision.
+                Specializing in critical financial applications and GTM automation workflows.
               </p>
             </>
             <div className='flex flex-wrap gap-4'>
@@ -31,18 +31,13 @@ const HeroSection = () => {
 
             <div className="mt-12 flex items-center gap-8 border-t border-border/50 pt-8">
               <div className="flex flex-col">
-                <span className="text-3xl font-bold text-primary">3+</span>
+                <span className="text-3xl font-bold text-primary">2.5+</span>
                 <span className="text-sm text-muted-foreground">Years Experience</span>
               </div>
               <div className="w-px h-10 bg-border"></div>
               <div className="flex flex-col">
                 <span className="text-3xl font-bold text-primary">10+</span>
                 <span className="text-sm text-muted-foreground">Projects Done</span>
-              </div>
-              <div className="w-px h-10 bg-border"></div>
-              <div className="flex flex-col">
-                <span className="text-3xl font-bold text-primary">100%</span>
-                <span className="text-sm text-muted-foreground">Satisfaction</span>
               </div>
             </div>
           </div>

@@ -1,16 +1,15 @@
-
 const experiences = [
     {
-        role: "Frontend Developer",
-        company: "Freelance",
-        period: "2023 - Present",
-        description: "Building responsive and accessible web applications for miscellaneous clients using React, Tailwind CSS, and TypeScript."
+        role: "Quality Assurance Engineer",
+        company: "nRev.ai",
+        period: "Nov 2025 - Present",
+        description: "Working on a GTM automation platform. Responsible for setting up and testing workflows for B2B companies to optimize their GTM and RevOps processes."
     },
     {
-        role: "Web Development Intern",
-        company: "Tech Solutions Inc.",
-        period: "2022 - 2023",
-        description: "Collaborated with senior developers to implement UI features and fix bugs in a large-scale React application."
+        role: "Software Engineer (QA)",
+        company: "CGI",
+        period: "July 2023 - Oct 2025",
+        description: "Worked on a critical Anti-Money Laundering (AML) application for major financial clients including Deutsche Bank, MFG, CFSB, and AIB. Ensured high precision and data integrity for high-stakes financial transactions."
     }
 ];
 

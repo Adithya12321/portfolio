@@ -14,14 +14,14 @@ const About = () => {
                         <div className="md:w-2/3 md:pl-12">
                             <h3 className="text-2xl font-semibold mb-4">Who am I?</h3>
                             <p className=" dark:text-gray-300 mb-6 leading-relaxed">
-                                I'm a frontend developer focused on building clean, responsive, and scalable web applications using React,
-                                TypeScript, and modern UI frameworks. I enjoy turning real-world problems into user-friendly solutions, with
-                                an emphasis on performance and maintainability.
+                                I am a Software Engineer with over 2.5 years of experience specializing in Quality Assurance and Automation.
+                                Currently, I work at <strong>nRev.ai</strong>, building GTM automation platforms that help B2B companies streamline their revenue operations.
                             </p>
                             <p className=" dark:text-gray-300 mb-6 leading-relaxed">
-                                With a background in QA and automation testing, I bring a quality-first mindset to development. This allows
-                                me to write robust code, anticipate edge cases, and ensure smooth, issue-free deployments — combining
-                                development efficiency with long-term stability.
+                                Previously, I worked at <strong>CGI</strong> as a QA Engineer for 2+ years, where I handled critical Anti-Money Laundering (AML)
+                                applications for major global banks like Deutsche Bank and AIB. My work focused on ensuring the absolute precision
+                                and security of high-volume financial transactions. I combine technical coding expertise with a rigorous testing mindset
+                                to deliver scalable, error-free solutions.
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <div className="flex items-center">
