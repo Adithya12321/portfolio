@@ -9,14 +9,19 @@ import HeroSection from './pages/HeroSection'
 
 import { useScrollSpy } from './hooks/useScrollSpy'
 
+import Skills from './components/Skills'
+import Experience from './components/Experience'
+
 function App() {
-  const activeSection = useScrollSpy(['home', 'about', 'projects', 'contact'], 100);
+  const activeSection = useScrollSpy(['home', 'about', 'experience', 'projects', 'contact'], 100);
 
   return (
     <div className='bg-background min-h-screen text-foreground font-[Inter]'>
       <div><Navbar activeSection={activeSection} /></div>
       <div ><HeroSection /></div>
+      <div ><Skills /></div>
       <div ><About /></div>
+      <div ><Experience /></div>
       <div ><FeaturedProjects /></div>
       {/* <div ><SkillsAndTools /></div> */}
       <div ><Contact /></div>
