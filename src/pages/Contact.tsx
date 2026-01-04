@@ -1,18 +1,59 @@
 import { Button } from '@/components/ui/button'
-import { Github, Linkedin, Mail, MapPinned, Phone } from 'lucide-react'
+import { Github, Linkedin, Mail, MapPinned, Phone, Loader2 } from 'lucide-react'
+import { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { toast } from 'sonner'
+
 
 const Contact = () => {
+    const formRef = useRef<HTMLFormElement>(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const sendEmail = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        if (!formRef.current) return;
+
+        const formData = new FormData(formRef.current);
+        const values = Object.fromEntries(formData.entries());
+
+        // Basic validation
+        if (!values.name || !values.email || !values.subject || !values.message) {
+            toast.error("Please fill in all fields.");
+            return;
+        }
+
+        setIsSubmitting(true);
+
+        // NOTE: Replace these with your actual EmailJS Service ID, Template ID, and Public Key
+        // You can get them from https://dashboard.emailjs.com/admin
+        const SERVICE_ID = 'service_hzx3ke8';
+        const TEMPLATE_ID = 'template_82sjpi4';
+        const PUBLIC_KEY = 'Xgdzrd1LxzO0MvmSb';
+
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+            .then(() => {
+                toast.success("Message sent successfully! I'll get back to you soon.");
+                formRef.current?.reset();
+            }, (error) => {
+                console.error(error);
+                toast.error("Failed to send message. Please try again later.");
+            })
+            .finally(() => {
+                setIsSubmitting(false);
+            });
+    };
 
     return (
         <section id='contact'>
             <div className='min-h-screen py-[5%] bg-background text-foreground'>
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text text-[#63B3ED]">Get In Touch</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text text-primary">Get In Touch</h2>
 
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="md:w-1/2">
-                            <h3 className="text-2xl font-semibold mb-6"></h3>
-                            <p className=" mb-8 leading-relaxed">
+                            <h3 className="text-2xl font-semibold mb-6">Let's Talk</h3>
+                            <p className=" mb-8 leading-relaxed text-muted-foreground">
                                 I'm currently available for freelance work and full-time positions.
                                 If you have a project that you want to get started, think you need my help
                                 with something or just fancy saying hey, then get in touch.
@@ -20,76 +61,79 @@ const Contact = () => {
 
                             <div className="space-y-4">
                                 <div className="flex items-start">
-                                    <div className="flex-shrink-0 h-10 w-10 rounded-full  flex items-center justify-center">
-                                        <MapPinned className=' ' />
+                                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-secondary/50 flex items-center justify-center">
+                                        <MapPinned className='text-primary' />
                                     </div>
                                     <div className="ml-4">
                                         <h4 className="font-medium">Location</h4>
-                                        <p className="">India</p>
+                                        <p className="text-muted-foreground">India</p>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start">
-                                    <div className="flex-shrink-0 h-10 w-10 rounded-full  flex items-center justify-center">
-                                        <Mail />
+                                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-secondary/50 flex items-center justify-center">
+                                        <Mail className='text-primary' />
                                     </div>
                                     <div className="ml-4">
                                         <h4 className="font-medium">Email</h4>
-                                        <p className="">adithyavenkatesh00@gmail.com</p>
+                                        <p className="text-muted-foreground">adithyavenkatesh00@gmail.com</p>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start">
-                                    <div className="flex-shrink-0 h-10 w-10 rounded-full  flex items-center justify-center">
-                                        <Phone />
+                                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-secondary/50 flex items-center justify-center">
+                                        <Phone className='text-primary' />
                                     </div>
                                     <div className="ml-4">
                                         <h4 className="font-medium">Phone</h4>
-                                        <p className="">8247207533</p>
+                                        <p className="text-muted-foreground">8247207533</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="mt-8 flex space-x-4">
-                                <a href="https://github.com/Adithya12321" className="h-10 w-10 rounded-full flex items-center justify-center  hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 transition">
-                                    <Github />
+                                <a href="https://github.com/Adithya12321" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full flex items-center justify-center border border-border hover:bg-primary hover:text-white transition-colors duration-300">
+                                    <Github size={20} />
                                 </a>
-                                <a href="https://www.linkedin.com/in/adithya-venkatesh-pithani-5bb4602aa/" className="h-10 w-10 rounded-full  flex items-center justify-center  hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 transition">
-                                    <Linkedin />
+                                <a href="https://www.linkedin.com/in/adithya-venkatesh-pithani-5bb4602aa/" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full flex items-center justify-center border border-border hover:bg-primary hover:text-white transition-colors duration-300">
+                                    <Linkedin size={20} />
                                 </a>
-                                {/* <a href="#" className="h-10 w-10 rounded-full  flex items-center justify-center  hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 transition">
-                            <Twitter />
-                        </a>
-                        <a href="#" className="h-10 w-10 rounded-full  flex items-center justify-center  hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 transition">
-                            <Instagram />
-                        </a> */}
                             </div>
                         </div>
 
                         <div className="md:w-1/2">
-                            <form className="space-y-6">
+                            <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium ">Name</label>
-                                    <input type="text" id="name" name="name" className="mt-1 block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
+                                    <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
+                                    <input type="text" id="name" name="name" className="w-full px-4 py-3 bg-secondary/30 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" placeholder="John Doe" />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium ">Email</label>
-                                    <input type="email" id="email" name="email" className="mt-1 block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
+                                    <label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
+                                    <input type="email" id="email" name="email" className="w-full px-4 py-3 bg-secondary/30 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" placeholder="john@example.com" />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="subject" className="block text-sm font-medium ">Subject</label>
-                                    <input type="text" id="subject" name="subject" className="mt-1 block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
+                                    <label htmlFor="subject" className="block text-sm font-medium mb-1">Subject</label>
+                                    <input type="text" id="subject" name="subject" className="w-full px-4 py-3 bg-secondary/30 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" placeholder="Project Inquiry" />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium ">Message</label>
-                                    <textarea id="message" name="message" rows={4} className="mt-1 block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+                                    <label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
+                                    <textarea id="message" name="message" rows={4} className="w-full px-4 py-3 bg-secondary/30 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" placeholder="Your message here..."></textarea>
                                 </div>
 
                                 <div>
-                                    <Button variant="outline" className='mr-2 w-full bg-[#63B3ED] !text-[#1A202C]'>Send Message</Button>
+                                    <Button type="submit" className='w-full bg-primary text-primary-foreground hover:bg-primary/90' disabled={isSubmitting}>
+                                        {isSubmitting ? (
+                                            <>
+                                                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                                Sending...
+                                            </>
+                                        ) : (
+                                            "Send Message"
+                                        )}
+                                    </Button>
                                 </div>
                             </form>
                         </div>
