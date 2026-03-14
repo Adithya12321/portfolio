@@ -25,11 +25,10 @@ const Contact = () => {
 
         setIsSubmitting(true);
 
-        // NOTE: Replace these with your actual EmailJS Service ID, Template ID, and Public Key
-        // You can get them from https://dashboard.emailjs.com/admin
-        const SERVICE_ID = 'service_hzx3ke8';
-        const TEMPLATE_ID = 'template_82sjpi4';
-        const PUBLIC_KEY = 'Xgdzrd1LxzO0MvmSb';
+        // Use environment variables for EmailJS credentials
+        const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
             .then(() => {
