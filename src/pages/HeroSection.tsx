@@ -20,8 +20,8 @@ const HeroSection = () => {
               </h1>
               <h2 className='text-2xl md:text-3xl font-semibold mb-6 text-muted-foreground'>SOFTWARE ENGINEER</h2>
               <p className='text-lg mb-8 max-w-xl text-muted-foreground leading-relaxed'>
-                I engineer robust digital solutions with a focus on quality, automation, and precision.
-                Specializing in critical financial applications and GTM automation workflows.
+                I engineer robust digital solutions with a focus on AI-assisted development, automation, and precision.
+                Specializing in test scaling architectures and GTM automation workflows.
               </p>
             </>
             <div className='flex flex-wrap gap-4'>

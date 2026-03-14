@@ -1,15 +1,15 @@
 const experiences = [
     {
-        role: "Quality Assurance Engineer",
+        role: "QA Automation Engineer",
         company: "nRev.ai",
         period: "Nov 2025 - Present",
-        description: "Working on a GTM automation platform. Responsible for setting up and testing workflows for B2B companies to optimize their GTM and RevOps processes."
+        description: "Utilizing AI-paired programming to scale test generation and automate coverage for complex AI-driven workflow nodes. Architected a comprehensive E2E suite using a createNodeTest() factory for 50+ node types. Contributed 100+ production commits to the nrev-ui-2 (Next.js/React) frontend, resolving UI bugs and improved UX. RCA and suggested fixes for complex state flow issues in Zustand and React Flow."
     },
     {
-        role: "Software Engineer (QA)",
+        role: "Software Engineer",
         company: "CGI",
         period: "July 2023 - Oct 2025",
-        description: "Worked on a critical Anti-Money Laundering (AML) application for major financial clients including Deutsche Bank, MFG, CFSB, and AIB. Ensured high precision and data integrity for high-stakes financial transactions."
+        description: "Provided quality assurance for HotScan360, a complex AML application for financial crime monitoring and big data fraud analysis. Developed automated test scripts and performed functional manual testing for new features. Awarded Silver and Bronze Awards for outstanding performance and critical bug identification."
     }
 ];
 

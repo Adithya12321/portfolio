@@ -11,19 +11,19 @@ const FeaturedProjects = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           <div className='h-full'>
             <ProjectCard
-              name='AML Transaction Validator'
+              name='HotScan360 (CGI)'
               imgPath='./fitechImage.webp'
               skills={["Java", "Selenium", "SQL", "Jenkins"]}
-              description="Designed and executed automated test suites for a high-volume Anti-Money Laundering (AML) system used by major global banks. Ensured 99.9% data accuracy in transaction monitoring and reduced regression testing time by 40%."
+              description="Designed and executed automated test suites for HotScan360, a high-volume Anti-Money Laundering (AML) system used by major global banks. Ensured high precision in transaction monitoring and reduced regression testing time by 40%."
               isPrivate={true}
             />
           </div>
           <div className='h-full'>
             <ProjectCard
-              name='GTM Workflow Automation'
+              name='Node Test Architecture (NurtureV)'
               imgPath='./gtm-engineer-card.webp'
-              skills={["TypeScript", "RevOps", "Automation", "Node.js"]}
-              description="Developing core automation workflows for a B2B Go-To-Market platform. Created complex data pipelines to synchronize customer data across CRM, Marketing, and Sales tools, capable of processing thouands of records per minute."
+              skills={["TypeScript", "Playwright", "Automation", "React"]}
+              description="Architected a scalable E2E test framework using a createNodeTest() factory to automate 50+ diverse workflow nodes. Significantly reduced boilerplate and accelerated test scaling for complex AI-driven workflows."
               isPrivate={true}
             />
           </div>

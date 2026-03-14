@@ -8,16 +8,15 @@ const About = () => {
                     <div className="flex flex-col md:flex-row items-center justify-center">
                         <div className="md:w-2/3 md:pl-12">
                             <h3 className="text-2xl font-semibold mb-4">Who am I?</h3>
-                            <p className=" dark:text-gray-300 mb-6 leading-relaxed">
-                                I am a Software Engineer with over 2.5 years of experience specializing in Quality Assurance and Automation.
-                                Currently, I work at <strong>nRev.ai</strong>, building GTM automation platforms that help B2B companies streamline their revenue operations.
-                            </p>
-                            <p className=" dark:text-gray-300 mb-6 leading-relaxed">
-                                Previously, I worked at <strong>CGI</strong> as a QA Engineer for 2+ years, where I handled critical Anti-Money Laundering (AML)
-                                applications for major global banks like Deutsche Bank and AIB. My work focused on ensuring the absolute precision
-                                and security of high-volume financial transactions. I combine technical coding expertise with a rigorous testing mindset
-                                to deliver scalable, error-free solutions.
-                            </p>
+                             <p className=" dark:text-gray-300 mb-6 leading-relaxed">
+                                 I am a Software Engineer with over 2.5 years of experience specializing in leveraging AI-assisted development workflows to accelerate test scaling.
+                                 Currently, I work at <strong>nRev.ai</strong>, building scalable E2E test architectures and contributing significantly to frontend development.
+                             </p>
+                             <p className=" dark:text-gray-300 mb-6 leading-relaxed">
+                                 Previously, I worked at <strong>CGI</strong> as a QA Engineer for 2+ years, where I handled critical Anti-Money Laundering (AML)
+                                 applications like <strong>HotScan360</strong> for major global banks. My recent work includes contributing 100+ production commits
+                                 to complex Next.js applications and debugging state flow issues in Zustand and React Flow.
+                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <div className="flex items-center">
                                     <i className="fas fa-map-marker-alt text-blue-500 mr-2"></i>
