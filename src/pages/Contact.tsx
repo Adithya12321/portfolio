@@ -47,7 +47,7 @@ const Contact = () => {
         <section id='contact'>
             <div className='min-h-screen py-[5%] bg-background text-foreground'>
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text text-primary">Get In Touch</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text text-brand">Get In Touch</h2>
 
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="md:w-1/2">
@@ -61,7 +61,7 @@ const Contact = () => {
                             <div className="space-y-4">
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0 h-10 w-10 rounded-full bg-secondary/50 flex items-center justify-center">
-                                        <MapPinned className='text-primary' />
+                                        <MapPinned className='text-brand' />
                                     </div>
                                     <div className="ml-4">
                                         <h4 className="font-medium">Location</h4>
@@ -71,7 +71,7 @@ const Contact = () => {
 
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0 h-10 w-10 rounded-full bg-secondary/50 flex items-center justify-center">
-                                        <Mail className='text-primary' />
+                                        <Mail className='text-brand' />
                                     </div>
                                     <div className="ml-4">
                                         <h4 className="font-medium">Email</h4>
@@ -81,7 +81,7 @@ const Contact = () => {
 
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0 h-10 w-10 rounded-full bg-secondary/50 flex items-center justify-center">
-                                        <Phone className='text-primary' />
+                                        <Phone className='text-brand' />
                                     </div>
                                     <div className="ml-4">
                                         <h4 className="font-medium">Phone</h4>
