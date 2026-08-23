@@ -58,7 +58,8 @@
   --secondary: oklch(0.967 0.003 264.542);
   --secondary-foreground: oklch(0.21 0.034 264.665);
   --muted: oklch(0.967 0.003 264.542);
-  --muted-foreground: oklch(0.551 0.027 264.364);
+  /* darkened from 0.551: that rendered 4.28:1 on white, under the 4.5 AA floor */
+  --muted-foreground: oklch(0.472 0.029 264.364);
   --accent: oklch(0.967 0.003 264.542);
   --accent-foreground: oklch(0.21 0.034 264.665);
   --destructive: oklch(0.577 0.245 27.325);
@@ -122,6 +123,11 @@
 
   body {
     @apply bg-background text-foreground font-[Inter];
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    body { transition: none; }
   }
 }
 
