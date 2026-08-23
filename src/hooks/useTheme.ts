@@ -21,7 +21,7 @@ function apply(theme: Theme) {
   // tells the browser to theme form controls and scrollbars to match
   root.style.colorScheme = theme
   document.querySelector('meta[name="theme-color"]')
-    ?.setAttribute('content', theme === 'dark' ? '#030712' : '#ffffff')
+    ?.setAttribute('content', theme === 'dark' ? '#030712' : '#faf8f4')
 }
 
 export function useTheme() {

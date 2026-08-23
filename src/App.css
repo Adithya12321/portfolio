@@ -44,41 +44,47 @@
 
 :root {
   --radius: 0.625rem;
-  /* Accent that stays legible in both themes. #63B3ED was hardcoded in two
-     headings and is only ~2.3:1 on white. */
-  --brand: #15629E;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.13 0.028 261.692);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.13 0.028 261.692);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.13 0.028 261.692);
-  --primary: oklch(0.21 0.034 264.665);
-  --primary-foreground: oklch(0.985 0.002 247.839);
-  --secondary: oklch(0.967 0.003 264.542);
-  --secondary-foreground: oklch(0.21 0.034 264.665);
-  --muted: oklch(0.967 0.003 264.542);
-  /* darkened from 0.551: that rendered 4.28:1 on white, under the 4.5 AA floor */
-  --muted-foreground: oklch(0.472 0.029 264.364);
-  --accent: oklch(0.967 0.003 264.542);
-  --accent-foreground: oklch(0.21 0.034 264.665);
+
+  /* Light theme is a warm ivory rather than #fff. Pure white next to a dark hero
+     photo is harsh to read against for any length of time; these are nudged warm
+     (a touch of yellow) and down off maximum luminance. Contrast is unaffected:
+     body text sits at 16:1 and muted text at 5.5:1 on this background. */
+  --background: #faf8f4;   /* soft ivory page */
+  --card: #fffdfa;         /* a shade lighter so cards lift off the page */
+  --card-foreground: #1c1b18;
+  --popover: #fffdfa;
+  --popover-foreground: #1c1b18;
+  --foreground: #1c1b18;   /* warm near-black, not blue-black */
+
+  /* Accent that stays legible in both themes. The site previously hardcoded #63B3ED,
+     which is only ~2.3:1 on white and would have failed the moment light mode existed. */
+  --brand: #15629e;
+
+  --primary: #23211c;
+  --primary-foreground: #faf8f4;
+  --secondary: #f0ede6;
+  --secondary-foreground: #23211c;
+  --muted: #f0ede6;
+  --muted-foreground: #6b6559;   /* 5.5:1 on the ivory background */
+  --accent: #f0ede6;
+  --accent-foreground: #23211c;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.928 0.006 264.531);
-  --input: oklch(0.928 0.006 264.531);
-  --ring: oklch(0.707 0.022 261.325);
+  --border: #e4dfd5;
+  --input: #e4dfd5;
+  --ring: #b9b1a2;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0.002 247.839);
-  --sidebar-foreground: oklch(0.13 0.028 261.692);
-  --sidebar-primary: oklch(0.21 0.034 264.665);
-  --sidebar-primary-foreground: oklch(0.985 0.002 247.839);
-  --sidebar-accent: oklch(0.967 0.003 264.542);
-  --sidebar-accent-foreground: oklch(0.21 0.034 264.665);
-  --sidebar-border: oklch(0.928 0.006 264.531);
-  --sidebar-ring: oklch(0.707 0.022 261.325);
+  --sidebar: #f5f2ec;
+  --sidebar-foreground: #1c1b18;
+  --sidebar-primary: #23211c;
+  --sidebar-primary-foreground: #faf8f4;
+  --sidebar-accent: #f0ede6;
+  --sidebar-accent-foreground: #23211c;
+  --sidebar-border: #e4dfd5;
+  --sidebar-ring: #b9b1a2;
 }
 
 .dark {
