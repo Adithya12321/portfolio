@@ -1,20 +1,112 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + React + TS</title>
+
+  <!-- Primary -->
+  <title>Adithya Venkatesh - SDET | AI-Assisted Test Engineering</title>
+  <meta name="description"
+    content="SDET with 3+ years building AI-assisted test systems. Sole QA owner through a public launch with zero critical bugs in production, and automation suites running 40% faster." />
+  <meta name="author" content="Adithya Venkatesh Pithani" />
+  <link rel="canonical" href="https://portfolio-lake-phi.vercel.app/" />
+  <meta name="theme-color" content="#030712" />
+
+  <!-- Runs before first paint so the page never flashes the wrong theme.
+       Mirrors resolveInitialTheme() in src/hooks/useTheme.ts. -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var dark = stored ? stored === 'dark'
+                          : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
+        document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/og-image.jpg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Adithya Venkatesh" />
+  <meta property="og:title" content="Adithya Venkatesh - SDET | AI-Assisted Test Engineering" />
+  <meta property="og:description"
+    content="Sole QA owner through a public launch with zero critical bugs in production. I build test systems that fix themselves." />
+  <meta property="og:url" content="https://portfolio-lake-phi.vercel.app/" />
+  <meta property="og:image" content="https://portfolio-lake-phi.vercel.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Adithya Venkatesh - SDET, AI-Assisted Test Engineering" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Adithya Venkatesh - SDET | AI-Assisted Test Engineering" />
+  <meta name="twitter:description"
+    content="Sole QA owner through a public launch with zero critical bugs in production. I build test systems that fix themselves." />
+  <meta name="twitter:image" content="https://portfolio-lake-phi.vercel.app/og-image.jpg" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap"
     rel="stylesheet">
+
+  <!-- LCP hint: the hero portrait -->
+  <link rel="preload" as="image" href="/profilePicture.webp" fetchpriority="high" />
+
+  <!-- Structured data: lets search engines identify the person behind the site -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Adithya Venkatesh Pithani",
+    "givenName": "Adithya",
+    "familyName": "Pithani",
+    "jobTitle": "Software Development Engineer in Test (SDET)",
+    "email": "mailto:adithyavenkatesh00@gmail.com",
+    "url": "https://portfolio-lake-phi.vercel.app/",
+    "image": "https://portfolio-lake-phi.vercel.app/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Visakhapatnam",
+      "addressRegion": "Andhra Pradesh",
+      "addressCountry": "IN"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Indian Institute of Information Technology, Tiruchirappalli"
+    },
+    "knowsAbout": [
+      "Test Automation", "Playwright", "Selenium", "SDET", "AI Agents",
+      "Playwright MCP", "TypeScript", "API Testing", "CI/CD", "React"
+    ],
+    "sameAs": [
+      "https://github.com/Adithya12321",
+      "https://www.linkedin.com/in/adithya-venkatesh-pithani-5bb4602aa/"
+    ]
+  }
+  </script>
 </head>
 
 <body>
   <div id="root"></div>
+  <noscript>
+    <div style="padding:2rem;font-family:system-ui,sans-serif;color:#ededf2;background:#030712">
+      <h1>Adithya Venkatesh - SDET</h1>
+      <p>This portfolio needs JavaScript enabled. You can reach me at
+        <a style="color:#63B3ED" href="mailto:adithyavenkatesh00@gmail.com">adithyavenkatesh00@gmail.com</a>
+        or on <a style="color:#63B3ED" href="https://github.com/Adithya12321">GitHub</a>.
+      </p>
+    </div>
+  </noscript>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
